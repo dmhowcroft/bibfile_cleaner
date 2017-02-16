@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # python alignbib.py bibfile outbibfile
 # aligns bibfile IDs to a unified format
 #  best used on a new bibfile before merging it into an existing bibfile
