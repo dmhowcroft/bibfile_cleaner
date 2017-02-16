@@ -7,7 +7,15 @@
 
 #  use idformat function to specify desired id format
 
-import re
+# Make Python 3 notation compatible with Python 2
+from __future__ import print_function
+# Likewise, use the same kind of zip function in both versions
+try:
+    import itertools.izip as zip
+except ImportError:
+    pass
+
+# Regular imports
 import sys
 
 
