@@ -22,15 +22,13 @@ def idformat(entry):
             authors[aix] = (sauth[1].strip(), cleanchars(sauth[0].strip().strip('{}')))  # (first, last)
         if len(authors) > 2:
             # et al case
-            entry['id'] = authors[0][1].lower().replace(' ', '') + 'etal' + entry['year'][-2:] + ','
+            entry['id'] = authors[0][1].lower().replace(' ', '') + '-et-al' + entry['year'] + ','
         elif len(authors) > 1:
             # two author case
-            entry['id'] = authors[0][1].lower().replace(' ', '') + authors[1][1].lower().replace(' ', '') + entry[
-                                                                                                                'year'][
-                                                                                                            -2:] + ','
+            entry['id'] = authors[0][1].lower().replace(' ', '') + "-" + authors[1][1].lower().replace(' ', '') + entry['year'] + ','
         else:
             # solo author case
-            entry['id'] = authors[0][1].lower().replace(' ', '') + entry['year'][-2:] + ','
+            entry['id'] = authors[0][1].lower().replace(' ', '') + entry['year'] + ','
     return entry
 
 
